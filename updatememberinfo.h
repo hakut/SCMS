@@ -17,7 +17,9 @@ public:
     ~UpdateMemberInfo();
     QSqlQuery *qry;
     LoginDialog conn;
-    QString id;
+    QString id_previous;
+    QString previous_id;
+
 
 private slots:
     void on_pushButton_clicked();

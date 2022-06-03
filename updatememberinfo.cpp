@@ -7,16 +7,16 @@ UpdateMemberInfo::UpdateMemberInfo(QString val,QWidget *parent) :
 {
     ui->setupUi(this);
     qry = new QSqlQuery(conn.mydb);
-    id = val;
-    qDebug() << "Update ID : " << id;
-    QString quer = "select name,surname,sex,dob,duration from memberdb where id=" + id;
+    id_previous = val;
+    qDebug() << "Update ID : " << id_previous;
+    QString quer = "select name,surname,sex,dob,duration from memberdb where id=" + id_previous;
     qDebug() << "Query : " << quer;
     qDebug() << qry->value(0).toString();
     qry->exec(quer);
     while(qry->next()) {
         ui->memberNameUpdate->setText(qry->value(0).toString());
         ui->memberSurnameUpdate->setText(qry->value(1).toString());
-        ui->memberIDUpdate->setText(id);
+        ui->memberIDUpdate->setText(id_previous);
         if(qry->value(2).toString() == ui->radioButton_femaleUpdate->text()){
             ui->radioButton_femaleUpdate->setChecked(1);
         }
@@ -53,7 +53,7 @@ void UpdateMemberInfo::on_pushButton_clicked()
     date = dob.toString("dd/MM/yyyy");
     qint16 dur = ui->spinBoxUpdate->value();
     duration = QString::number(dur);
-    QString insertQ = "Update memberdb set id=" + id + ", name='"+ name + "', surname='" + surname + "', sex='" + sex + "', dob='" + date + "', duration=" + duration  ;
+    QString insertQ = "Update memberdb set id=" + id + ", name='"+ name + "', surname='" + surname + "', sex='" + sex + "', dob='" + date + "', duration=" + duration + " where id=" + id_previous ;
     qDebug() << "Query : " << insertQ;
     qry->exec(insertQ);
     UpdateMemberInfo::close();

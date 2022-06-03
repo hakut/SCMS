@@ -48,15 +48,6 @@ void MainWindow::on_newMember_clicked()
 void MainWindow::on_delMember_clicked()
 {
     ui->tableView->setModel(modal);
-
-//    QModelIndexList id_int = ui->tableView->selectionModel()->selectedRows();
-//    for(int i = 0 ; i < id_int.size() ;i++){
-//        qDebug() << id_int.at(i).data().toStringList();
-//    }
-//    qDebug() << "Blahblah" << val;
-//    qDebug() << id.data().toString();
-//    QString id = QString::number(id_int);
-//    qDebug() << "Id : " << id;
     qry = new QSqlQuery(conn.mydb);
     qry->exec("Delete from memberdb where id=" + val);
     this->modal->setQuery("select * from memberdb");
