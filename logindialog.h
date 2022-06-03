@@ -5,7 +5,7 @@
 #include <QSqlDatabase>
 #include <QSqlQuery>
 #include <QMessageBox>
-
+#include <QApplication>
 namespace Ui {
 class LoginDialog;
 }
@@ -30,7 +30,7 @@ public:
     }
     bool connOpen(){
         mydb = QSqlDatabase::addDatabase("QSQLITE");
-        mydb.setDatabaseName("C:/Users/samet.hakut/Desktop/memberdb.sqlite");
+        mydb.setDatabaseName(qApp->applicationDirPath() + "/memberdb.sqlite");
 
         if(mydb.open()){
             is_open_db = true;

@@ -13,7 +13,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {   
     ui->setupUi(this);
-    QPixmap pix("C:/Users/samet.hakut/Desktop/new.jpg");
+    QPixmap pix(":/Resources/logo.jpg");
 
     ui->label_image->setPixmap(pix);
     timer = new QTimer(this);

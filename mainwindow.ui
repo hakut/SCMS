@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
+    <width>820</width>
     <height>600</height>
    </rect>
   </property>
@@ -60,23 +60,22 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="gridLayoutWidget">
+   <widget class="QWidget" name="gridLayoutWidget_2">
     <property name="geometry">
      <rect>
-      <x>640</x>
-      <y>50</y>
-      <width>148</width>
-      <height>51</height>
+      <x>630</x>
+      <y>10</y>
+      <width>181</width>
+      <height>91</height>
      </rect>
     </property>
-    <layout class="QGridLayout" name="gridLayout">
-     <item row="2" column="1">
-      <widget class="QLabel" name="label_time">
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="0" column="1">
+      <widget class="QLabel" name="label_date">
        <property name="font">
         <font>
          <family>Comic Sans MS</family>
          <pointsize>14</pointsize>
-         <bold>false</bold>
         </font>
        </property>
        <property name="text">
@@ -84,34 +83,6 @@
        </property>
       </widget>
      </item>
-     <item row="2" column="0">
-      <widget class="QLabel" name="label_2">
-       <property name="font">
-        <font>
-         <family>Comic Sans MS</family>
-         <pointsize>14</pointsize>
-         <italic>true</italic>
-         <bold>true</bold>
-         <underline>true</underline>
-        </font>
-       </property>
-       <property name="text">
-        <string>Time:</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="gridLayoutWidget_2">
-    <property name="geometry">
-     <rect>
-      <x>630</x>
-      <y>10</y>
-      <width>160</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <layout class="QGridLayout" name="gridLayout_2">
      <item row="0" column="0">
       <widget class="QLabel" name="label_3">
        <property name="font">
@@ -128,12 +99,29 @@
        </property>
       </widget>
      </item>
-     <item row="0" column="1">
-      <widget class="QLabel" name="label_date">
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_2">
        <property name="font">
         <font>
          <family>Comic Sans MS</family>
          <pointsize>14</pointsize>
+         <italic>true</italic>
+         <bold>true</bold>
+         <underline>true</underline>
+        </font>
+       </property>
+       <property name="text">
+        <string>Time:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLabel" name="label_time">
+       <property name="font">
+        <font>
+         <family>Comic Sans MS</family>
+         <pointsize>14</pointsize>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
@@ -146,9 +134,9 @@
    <widget class="QTableView" name="tableView">
     <property name="geometry">
      <rect>
-      <x>140</x>
+      <x>100</x>
       <y>340</y>
-      <width>491</width>
+      <width>611</width>
       <height>221</height>
      </rect>
     </property>
@@ -159,7 +147,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>820</width>
      <height>22</height>
     </rect>
    </property>
